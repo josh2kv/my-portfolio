@@ -1,3 +1,9 @@
+const path = require(`path`)
+
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
     title: `Gatsby Default Starter`,
@@ -11,24 +17,60 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`,
+        path: path.join(__dirname, `src`, `assets`, `images`, `etc`),
+      },
+    },
+    {
+      resolve: `gatsby-plugin-react-svg`,
+      options: {
+        rule: {
+          include: /svg/,
+        },
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `data`,
+        path: path.join(__dirname, `src`, `data`),
       },
     },
     `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+
     {
-      resolve: `gatsby-plugin-manifest`,
+      resolve: `gatsby-plugin-sharp`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
-        start_url: `/`,
-        background_color: `#663399`,
-        // This will impact how browsers show your PWA/website
-        // https://css-tricks.com/meta-theme-color-and-trickery/
-        // theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        defaults: {
+          placeholder: "blurred",
+          quality: 100,
+          formats: ["auto", "webp"],
+          breakpoints: [576, 768, 992, 1200, 1400, 1600],
+        },
       },
     },
+    {
+      resolve: "gatsby-plugin-web-font-loader",
+      options: {
+        google: {
+          families: ["Noto Sans KR:300,400,500,700"],
+        },
+      },
+    },
+    {
+      resolve: `gatsby-plugin-styled-components`,
+      options: {
+        // minify: false, // Breaks styles if not set to false
+      },
+    },
+    {
+      resolve: "gatsby-plugin-manifest",
+      options: {
+        icon: "src/assets/images/svg/favicon.svg",
+      },
+    },
+    `gatsby-transformer-json`,
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-google-gtag`,
+    "gatsby-plugin-sitemap",
   ],
 }

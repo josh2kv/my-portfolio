@@ -2,30 +2,18 @@ import themeGet from '@styled-system/theme-get';
 import React from 'react';
 import styled from 'styled-components';
 
-const tabs = [
-  {
-    id: 'home',
-    title: 'home',
-    path: '/',
-  },
-  {
-    id: 'about-me',
-    title: 'about me',
-    path: '/about-me',
-  },
-  {
-    id: 'portfolio',
-    title: 'portfolio',
-    path: 'portfolio',
-  },
-];
-
-const TabBar = () => {
+const TabBar = ({ tabs, selectedTab, handleClickTab }) => {
   return (
     <Block>
       <div className="tabs">
         {tabs.map(tab => (
-          <div key={tab.id} className="tab">
+          <div
+            key={tab.id}
+            className={`tab ${selectedTab === tab.id && 'active'}`}
+            onClick={() => {
+              handleClickTab(tab.id);
+            }}
+          >
             {tab.title}
           </div>
         ))}

@@ -8,7 +8,7 @@ import Profile from './Profile';
 import theme from '../css/theme';
 import { device, breakpoints } from '../css/breakpoints.js';
 
-const Layout = ({ children }) => {
+const Layout = ({ tabs, selectedTab, handleClickTab, children }) => {
   return (
     <>
       <ThemeProvider theme={theme}>
@@ -17,7 +17,11 @@ const Layout = ({ children }) => {
         <LayoutWrapper>
           <ContainerWrapper>
             <main>
-              <TabBar />
+              <TabBar
+                tabs={tabs}
+                selectedTab={selectedTab}
+                handleClickTab={handleClickTab}
+              />
               {children}
             </main>
             <aside>

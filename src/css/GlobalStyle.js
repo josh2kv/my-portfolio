@@ -23,32 +23,32 @@ export const GlobalStyle = createGlobalStyle`${css`
   }
 
   body {
-    font-size: ${props => props.theme.default.fontSize}rem;
-    font-weight: ${props => props.theme.default.fontWeight};
-    line-height: ${props => props.theme.default.lineHeight};
-    letter-spacing: ${props => props.theme.default.letterSpacing};
-    color: ${props => props.theme.default.color};
-    font-family: ${props => props.theme.default.fontFamily};
+    font-size: ${themeGet('default.fontSize')};
+    font-weight: ${themeGet('default.fontWeight')};
+    line-height: ${themeGet('default.lineHeight')};
+    letter-spacing: ${themeGet('default.letterSpacing')};
+    color: ${themeGet('default.color')};
+    font-family: ${themeGet('default.fontFamily')};
   }
 
   h1 {
-    font-size: ${props => props.theme.fontSizes[11]}rem;
+    font-size: ${themeGet('fontSizes.s11')};
   }
   h2 {
-    font-size: ${props => props.theme.fontSizes[8]}rem;
+    font-size: ${themeGet('fontSizes.s8')};
   }
   h3 {
-    font-size: ${props => props.theme.fontSizes[7]}rem;
+    font-size: ${themeGet('fontSizes.s7')};
     line-height: ${themeGet('lineHeights.tight')};
   }
   h4 {
-    font-size: ${props => props.theme.fontSizes[6]}rem;
+    font-size: ${themeGet('fontSizes.s6')};
   }
   h5 {
-    font-size: ${props => props.theme.fontSizes[5]}rem;
+    font-size: ${themeGet('fontSizes.s5')};
   }
   h6 {
-    font-size: ${props => props.theme.fontSizes[4]}rem;
+    font-size: ${themeGet('fontSizes.s4')};
   }
 
   .react-reveal {

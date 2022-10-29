@@ -1,4 +1,5 @@
 import { createGlobalStyle, css } from 'styled-components';
+import themeGet from '@styled-system/theme-get';
 
 export const ResetCSS = createGlobalStyle`${css`
   html,
@@ -160,6 +161,10 @@ export const ResetCSS = createGlobalStyle`${css`
     border: 0;
     outline: none;
     cursor: pointer;
+    border: 1px solid ${themeGet('colors.borderMain')};
+    color: ${themeGet('default.color')};
+    font-size: ${themeGet('default.fontSize')};
+    background-color: transparent;
   }
 
   abbr {

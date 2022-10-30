@@ -1,8 +1,8 @@
-const path = require(`path`)
+const path = require(`path`);
 
-require("dotenv").config({
+require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
-})
+});
 
 module.exports = {
   siteMetadata: {
@@ -41,18 +41,18 @@ module.exports = {
       resolve: `gatsby-plugin-sharp`,
       options: {
         defaults: {
-          placeholder: "blurred",
+          placeholder: 'blurred',
           quality: 100,
-          formats: ["auto", "webp"],
+          formats: ['auto', 'webp'],
           breakpoints: [576, 768, 992, 1200, 1400, 1600],
         },
       },
     },
     {
-      resolve: "gatsby-plugin-web-font-loader",
+      resolve: 'gatsby-plugin-web-font-loader',
       options: {
         google: {
-          families: ["Noto Sans KR:300,400,500,700"],
+          families: ['Noto Sans KR:100,300,400,500,700'],
         },
       },
     },
@@ -63,14 +63,14 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-plugin-manifest",
+      resolve: 'gatsby-plugin-manifest',
       options: {
-        icon: "src/assets/images/svg/favicon.svg",
+        icon: 'src/assets/images/etc/favicon.png',
       },
     },
     `gatsby-transformer-json`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-google-gtag`,
-    "gatsby-plugin-sitemap",
+    'gatsby-plugin-sitemap',
   ],
-}
+};

@@ -11,6 +11,8 @@ const Block = styled.div`
   color: ${themeGet('colors.primary')};
   font-weight: ${themeGet('fontWeights.light')};
   font-size: ${themeGet('fontSizes.s5')};
+  letter-spacing: ${themeGet('letterSpacings.wide')};
+  margin-bottom: 2rem;
 `;
 
 export default SectionTitle;

@@ -22,7 +22,7 @@ const Layout = ({ tabs, selectedTab, handleClickTab, children }) => {
                 selectedTab={selectedTab}
                 handleClickTab={handleClickTab}
               />
-              {children}
+              <div className="content">{children}</div>
             </main>
             <aside>
               <Profile />
@@ -40,17 +40,21 @@ const LayoutWrapper = styled.div`
 
   min-height: 100vh;
   background: ${themeGet('colors.bgBody')};
+
+  .content {
+    padding: 3.2rem 0 3.2rem 4rem;
+  }
 `;
 
 const ContainerWrapper = styled.div`
   display: flex;
 
   main {
-    flex: 0 0 75%;
+    width: 75%;
   }
 
   aside {
-    flex: 0 0 25%;
+    width: 25%;
     border-left: 1px solid ${themeGet('colors.borderSub')};
   }
 

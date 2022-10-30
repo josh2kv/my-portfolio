@@ -6,9 +6,11 @@ const theme = {
     bgBody:
       'radial-gradient(66.66% 66.66% at 50% 0%, #32333f 0%, rgba(50, 51, 63, 0) 100% ), linear-gradient(180deg, #05070b 0%, #17171d 100%)',
     bgSection: 'rgba(255, 255, 255, 0.03)',
+    overlay: 'rgba(0, 0, 0, 0.4)',
     primary: palette.amber6,
     textMain: palette.neutInv.primary,
     textSub: palette.neutInv.secondary,
+    textInv: palette.neut.primary,
     borderMain: palette.zinc8,
     borderSub: '#32333F',
   },
@@ -43,6 +45,10 @@ const theme = {
   },
   borderRadius: {
     section: '4px',
+    small: '2px',
+  },
+  transition: {
+    normal: 'all 0.4s ease 0s',
   },
   default: {
     color: palette.neutInv.primary,

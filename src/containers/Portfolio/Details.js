@@ -12,7 +12,7 @@ const Details = ({ details }) => {
           <ul className="detail__content">
             {detail.content.map(el =>
               detail.hasIcon ? (
-                <li className="list-with-icon">
+                <li className="list-with-icon" key={el}>
                   <AiOutlineCheck className="icon" />
                   <span className="li">{el}</span>
                 </li>
@@ -46,7 +46,7 @@ const Block = styled.div`
     }
 
     &__content {
-      font-weight: ${themeGet('fontWeights.light')};
+      font-weight: ${themeGet('fontWeights.extraLight')};
 
       display: flex;
       flex-direction: column;

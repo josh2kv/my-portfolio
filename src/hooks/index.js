@@ -191,6 +191,7 @@ export const useProjects = () => {
             'Vanilla JavaScript로 일부 CSR',
             'Chart Library를 이용한 데이터 시각화',
             'SVG를 이용한 효과 애니메이션 구현',
+            'PHP로 일부페이지 API 구현 및 SSR',
           ],
         },
       ],

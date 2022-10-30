@@ -10,6 +10,15 @@ import {
   BsEnvelope,
   BsTelephone,
 } from 'react-icons/bs';
+
+import {
+  AiOutlineHome,
+  AiTwotoneHome,
+  AiFillHome,
+  AiFillGithub,
+  AiOutlineMail,
+  AiOutlinePhone,
+} from 'react-icons/ai';
 import Download from './Download';
 
 const contactInfo = {
@@ -53,7 +62,7 @@ const Profile = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <BsHouseFill
+            <AiFillHome
               onMouseEnter={() => {
                 setContact('homepage');
               }}
@@ -68,7 +77,7 @@ const Profile = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <BsGithub
+            <AiFillGithub
               className="icon"
               onMouseEnter={() => {
                 setContact('github');
@@ -78,7 +87,7 @@ const Profile = () => {
               }}
             />
           </a>
-          <BsEnvelope
+          <AiOutlineMail
             className="icon"
             onMouseEnter={() => {
               setContact('email');
@@ -87,7 +96,7 @@ const Profile = () => {
               setContact('');
             }}
           />
-          <BsTelephone
+          <AiOutlinePhone
             className="icon"
             onMouseEnter={() => {
               setContact('phone');

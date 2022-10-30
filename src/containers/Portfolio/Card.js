@@ -19,7 +19,9 @@ const Card = ({ selectedProject, project }) => {
         <div className={`overlay ${isSelected ? '' : 'active'}`}></div>
       </ImageWrapper>
       <div className="sub-title">{project.subTitle}</div>
-      <div className="main-title">{project.mainTitle}</div>
+      <div className={`main-title ${isSelected ? 'active' : ''}`}>
+        {project.mainTitle}
+      </div>
     </Block>
   );
 };
@@ -66,6 +68,11 @@ const Block = styled.div`
 
   .main-title {
     font-size: ${themeGet('fontSizes.s5')};
+    color: ${themeGet('colors.textDisabled')};
+
+    &.active {
+      color: ${themeGet('colors.primary')};
+    }
   }
 `;
 

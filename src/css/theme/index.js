@@ -11,6 +11,7 @@ const theme = {
     textMain: palette.neutInv.primary,
     textSub: palette.neutInv.secondary,
     textInv: palette.neut.primary,
+    textDisabled: 'rgba(255, 255, 255, 0.8)',
     borderMain: palette.zinc8,
     borderSub: '#32333F',
   },
@@ -31,7 +32,13 @@ const theme = {
     s13: '5.6rem',
     s14: '6.4rem',
   },
-  fontWeights: { light: 300, regular: 400, medium: 500, bold: 700 },
+  fontWeights: {
+    extraLight: 100,
+    light: 300,
+    regular: 400,
+    medium: 500,
+    bold: 700,
+  },
   lineHeights: { short: 0.75, none: 1, tight: 1.25, normal: 1.6, loose: 2 },
   letterSpacings: {
     tight: '-0.05rem',

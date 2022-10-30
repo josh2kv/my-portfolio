@@ -14,17 +14,31 @@ import DividerH from '../../components/DividerH';
 import Details from './Details';
 
 import { useProjects } from '../../hooks';
+import Gallery from './Gallery';
 
 const Portfolio = () => {
   const projects = useProjects();
   const [selectedProject, setSelectedProject] = useState('orion');
+  const [galleryIsOpen, setGalleryIsOpen] = useState(false);
 
-  const details = projects.find(
+  const handleOpenGallery = () => {
+    setGalleryIsOpen(true);
+  };
+  const handleCloseGallery = () => {
+    setGalleryIsOpen(false);
+  };
+
+  const { details, images } = projects.find(
     project => project.id === selectedProject,
-  ).details;
+  );
 
   return (
     <Block>
+      <Gallery
+        galleryIsOpen={galleryIsOpen}
+        handleCloseGallery={handleCloseGallery}
+        images={images}
+      />
       <SectionTitle title="my projects" />
       <SwiperWrapper
         slidesPerView={'auto'}
@@ -49,7 +63,7 @@ const Portfolio = () => {
         ))}
       </SwiperWrapper>
       <DividerH />
-      <Details details={details} />
+      <Details details={details} handleClickGallery={handleOpenGallery} />
     </Block>
   );
 };

@@ -10,13 +10,13 @@ const Card = ({ selectedProject, project }) => {
 
   return (
     <Block>
-      <ImageWrapper>
+      <ImageWrapper isSelected={isSelected}>
         <GatsbyImage
           className="thumbnail"
           image={thumbnail}
           alt={project.mainTitle}
         />
-        <div className={`overlay ${isSelected ? '' : 'active'}`}></div>
+        <div className="overlay"></div>
       </ImageWrapper>
       <div className="sub-title">{project.subTitle}</div>
       <div className={`main-title ${isSelected ? 'active' : ''}`}>
@@ -30,26 +30,31 @@ const ImageWrapper = styled.div`
   display: grid;
 
   &:hover {
-    .overlay {
-      background-color: none;
-    }
+    filter: brightness(1.2);
   }
 
   .overlay {
     z-index: 1;
     grid-area: 1 / 1;
-    background-color: transparent;
+    background-color: ${themeGet('colors.overlay')};
     transition: ${themeGet('transition.normal')};
-
-    &.active {
-      background-color: ${themeGet('colors.overlay')};
-    }
   }
 
   .thumbnail {
     grid-area: 1 / 1;
-    box-shadow: 0 6px 26px 6px rgb(0 0 0 / 25%);
   }
+
+  ${({ isSelected }) =>
+    isSelected &&
+    css`
+      &:hover {
+        filter: brightness(1);
+      }
+
+      .overlay {
+        background-color: transparent;
+      }
+    `}
 `;
 
 const Block = styled.div`

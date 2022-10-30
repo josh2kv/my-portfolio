@@ -20,7 +20,7 @@ const Block = styled.button`
 
   max-width: 20rem;
   width: 100%;
-  padding: 0.5rem 1rem;
+  padding: 0.6rem 1rem;
 
   &:hover {
     background-color: ${themeGet('colors.primary')};

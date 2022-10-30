@@ -7,7 +7,7 @@ const theme = {
       'radial-gradient(66.66% 66.66% at 50% 0%, #32333f 0%, rgba(50, 51, 63, 0) 100% ), linear-gradient(180deg, #05070b 0%, #17171d 100%)',
     bgSection: 'rgba(255, 255, 255, 0.03)',
     overlay: 'rgba(0, 0, 0, 0.4)',
-    primary: palette.amber6,
+    primary: palette.amber5,
     textMain: palette.neutInv.primary,
     textSub: palette.neutInv.secondary,
     textInv: palette.neut.primary,
@@ -49,6 +49,7 @@ const theme = {
   shadows: {
     section: '0 4px 4px 0 rgba(0, 0, 0, 0.25)',
     minimum: '0 2px 2px 0 rgba(0, 0, 0, 0.25)',
+    selected: '0 6px 26px 6px rgba(0, 0, 0, 0.3);',
   },
   borderRadius: {
     section: '4px',

@@ -51,12 +51,7 @@ export const GlobalStyle = createGlobalStyle`${css`
     font-size: ${themeGet('fontSizes.s4')};
   }
 
-  .react-reveal {
-    width: 100%;
-    height: 100%;
-  }
-
-  .color-white {
-    color: #ffffff;
+  .text-underline {
+    text-decoration: underline;
   }
 `}`;

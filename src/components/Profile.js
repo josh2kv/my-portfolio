@@ -2,18 +2,10 @@ import React, { useState } from 'react';
 import { StaticImage } from 'gatsby-plugin-image';
 import styled from 'styled-components';
 import themeGet from '@styled-system/theme-get';
-import {
-  BsGeoAlt,
-  BsBuilding,
-  BsHouseFill,
-  BsGithub,
-  BsEnvelope,
-  BsTelephone,
-} from 'react-icons/bs';
+import { BsGeoAlt, BsBuilding } from 'react-icons/bs';
 
 import {
   AiOutlineHome,
-  AiTwotoneHome,
   AiFillHome,
   AiFillGithub,
   AiOutlineMail,

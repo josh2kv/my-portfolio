@@ -5,9 +5,41 @@ import { AiOutlineLink } from 'react-icons/ai';
 import theme from '../css/theme';
 
 export const useProjects = () => {
-  const { orion001, czi001, temps001, jung001 } = useStaticQuery(graphql`
+  const {
+    orion001,
+    czi001,
+    temps001,
+    jung001,
+    orion002,
+    czi002,
+    temps002,
+    jung002,
+    orion003,
+    czi003,
+    temps003,
+    jung003,
+    orion004,
+    czi004,
+    temps004,
+    jung004,
+  } = useStaticQuery(graphql`
     query {
       orion001: file(relativePath: { eq: "case_orion-001.jpg" }) {
+        childImageSharp {
+          gatsbyImageData(quality: 100, layout: FULL_WIDTH)
+        }
+      }
+      orion002: file(relativePath: { eq: "case_orion-002.jpg" }) {
+        childImageSharp {
+          gatsbyImageData(quality: 100, layout: FULL_WIDTH)
+        }
+      }
+      orion003: file(relativePath: { eq: "case_orion-003.jpg" }) {
+        childImageSharp {
+          gatsbyImageData(quality: 100, layout: FULL_WIDTH)
+        }
+      }
+      orion004: file(relativePath: { eq: "case_orion-004.jpg" }) {
         childImageSharp {
           gatsbyImageData(quality: 100, layout: FULL_WIDTH)
         }
@@ -17,12 +49,57 @@ export const useProjects = () => {
           gatsbyImageData(quality: 100, layout: FULL_WIDTH)
         }
       }
+      czi002: file(relativePath: { eq: "case_czi-002.jpg" }) {
+        childImageSharp {
+          gatsbyImageData(quality: 100, layout: FULL_WIDTH)
+        }
+      }
+      czi003: file(relativePath: { eq: "case_czi-003.jpg" }) {
+        childImageSharp {
+          gatsbyImageData(quality: 100, layout: FULL_WIDTH)
+        }
+      }
+      czi004: file(relativePath: { eq: "case_czi-004.jpg" }) {
+        childImageSharp {
+          gatsbyImageData(quality: 100, layout: FULL_WIDTH)
+        }
+      }
       temps001: file(relativePath: { eq: "case_temps-001.jpg" }) {
         childImageSharp {
           gatsbyImageData(quality: 100, layout: FULL_WIDTH)
         }
       }
+      temps002: file(relativePath: { eq: "case_temps-002.jpg" }) {
+        childImageSharp {
+          gatsbyImageData(quality: 100, layout: FULL_WIDTH)
+        }
+      }
+      temps003: file(relativePath: { eq: "case_temps-003.jpg" }) {
+        childImageSharp {
+          gatsbyImageData(quality: 100, layout: FULL_WIDTH)
+        }
+      }
+      temps004: file(relativePath: { eq: "case_temps-004.jpg" }) {
+        childImageSharp {
+          gatsbyImageData(quality: 100, layout: FULL_WIDTH)
+        }
+      }
       jung001: file(relativePath: { eq: "case_jung-001.jpg" }) {
+        childImageSharp {
+          gatsbyImageData(quality: 100, layout: FULL_WIDTH)
+        }
+      }
+      jung002: file(relativePath: { eq: "case_jung-002.jpg" }) {
+        childImageSharp {
+          gatsbyImageData(quality: 100, layout: FULL_WIDTH)
+        }
+      }
+      jung003: file(relativePath: { eq: "case_jung-003.jpg" }) {
+        childImageSharp {
+          gatsbyImageData(quality: 100, layout: FULL_WIDTH)
+        }
+      }
+      jung004: file(relativePath: { eq: "case_jung-004.jpg" }) {
         childImageSharp {
           gatsbyImageData(quality: 100, layout: FULL_WIDTH)
         }
@@ -59,7 +136,13 @@ export const useProjects = () => {
         {
           title: '업무범위',
           hasIcon: false,
-          content: [' 기획(100%) / 디자인(100%) / 프론트엔드(100%)'],
+          content: [
+            <>
+              <span className="text-underline">기획(100%)</span> /{' '}
+              <span className="text-underline">디자인(100%)</span> /{' '}
+              <span className="text-underline">프론트엔드(100%)</span>
+            </>,
+          ],
         },
         {
           title: '사용기술',
@@ -81,6 +164,7 @@ export const useProjects = () => {
           ],
         },
       ],
+      images: [orion001, orion002, orion003, orion004],
     },
     {
       id: 'czi',
@@ -121,15 +205,19 @@ export const useProjects = () => {
           title: '업무범위',
           hasIcon: false,
           content: [
-            ' 기획(30%) / 디자인(20%) / 프론트엔드(100%) / 백엔드(100%)',
+            <>
+              기획(30%) / 디자인(20%) /{' '}
+              <span className="text-underline">프론트엔드(100%)</span> /{' '}
+              <span className="text-underline">백엔드(100%)</span>
+            </>,
           ],
         },
         {
           title: '사용기술',
           hasIcon: false,
           content: [
-            '프론트엔드: Gatsby(SSG, GraphQL), styled-components 등',
-            '백엔드: Strapi(Headless CMS, Koa), MySQL, NGINX',
+            '프론트엔드: Gatsby, styled-components 등',
+            '백엔드: Strapi, MySQL, NGINX',
           ],
         },
         {
@@ -144,6 +232,7 @@ export const useProjects = () => {
           ],
         },
       ],
+      images: [czi001, czi002, czi003, czi004],
     },
     {
       id: 'temps',
@@ -173,7 +262,12 @@ export const useProjects = () => {
         {
           title: '업무범위',
           hasIcon: false,
-          content: [' 기획(100%) / 프론트엔드(100%)'],
+          content: [
+            <>
+              <span className="text-underline">기획(100%)</span> /{' '}
+              <span className="text-underline">프론트엔드(100%)</span>
+            </>,
+          ],
         },
         {
           title: '사용기술',
@@ -195,6 +289,7 @@ export const useProjects = () => {
           ],
         },
       ],
+      images: [temps001, temps002, temps003, temps004],
     },
     {
       id: 'jungs-food',
@@ -224,7 +319,12 @@ export const useProjects = () => {
         {
           title: '업무범위',
           hasIcon: false,
-          content: [' 기획(30%) / 프론트엔드(100%)'],
+          content: [
+            <>
+              기획(30%) /{' '}
+              <span className="text-underline">프론트엔드(100%)</span>
+            </>,
+          ],
         },
         {
           title: '사용기술',
@@ -259,6 +359,7 @@ export const useProjects = () => {
           ],
         },
       ],
+      images: [jung001, jung002, jung003, jung004],
     },
   ];
 

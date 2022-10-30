@@ -2,10 +2,12 @@ import React from 'react';
 import styled from 'styled-components';
 import themeGet from '@styled-system/theme-get';
 import { AiOutlineCheck } from 'react-icons/ai';
+import SvgGallery from '../../assets/images/svg/icon_gallery.svg';
 
-const Details = ({ details }) => {
+const Details = ({ details, handleClickGallery }) => {
   return (
     <Block>
+      <SvgGallery className="icon-gallery" onClick={handleClickGallery} />
       {details.map(detail => (
         <div className="detail" key={detail.title}>
           <div className="detail__label">{detail.title}</div>
@@ -29,6 +31,20 @@ const Details = ({ details }) => {
 
 const Block = styled.div`
   margin-top: 3rem;
+  position: relative;
+
+  .icon-gallery {
+    position: absolute;
+    right: 3rem;
+    width: 3rem;
+    height: 3rem;
+    color: ${themeGet('colors.primary')};
+    cursor: pointer;
+
+    &:hover {
+      filter: brightness(1.1);
+    }
+  }
 
   .detail {
     display: flex;

@@ -134,6 +134,11 @@ export const useProjects = () => {
           content: ['2022.09 ~ 현재 (2개월)'],
         },
         {
+          title: '작업인원',
+          hasIcon: false,
+          content: ['2명(프론트엔드/백엔드)'],
+        },
+        {
           title: '업무범위',
           hasIcon: false,
           content: [
@@ -202,6 +207,11 @@ export const useProjects = () => {
           content: ['2022.07 ~ 현재 (4개월)'],
         },
         {
+          title: '작업인원',
+          hasIcon: false,
+          content: ['2명(디자이너/프론트엔드)'],
+        },
+        {
           title: '업무범위',
           hasIcon: false,
           content: [
@@ -260,6 +270,11 @@ export const useProjects = () => {
           content: ['2021.05 ~ 현재 (1년 6개월)'],
         },
         {
+          title: '작업인원',
+          hasIcon: false,
+          content: ['3명(디자이너/프론트엔드/백엔드)'],
+        },
+        {
           title: '업무범위',
           hasIcon: false,
           content: [
@@ -315,6 +330,11 @@ export const useProjects = () => {
           title: '작업기간',
           hasIcon: false,
           content: ['2021.10 ~ 2021.12 (3개월)'],
+        },
+        {
+          title: '작업인원',
+          hasIcon: false,
+          content: ['2명(프론트엔드/백엔드)'],
         },
         {
           title: '업무범위',

@@ -14,7 +14,7 @@ import {
 import Download from './Download';
 
 const contactInfo = {
-  homepage: 'https://josh2kv.github.io',
+  homepage: 'https://myportfoliomain48907.gatsbyjs.io',
   github: 'https://github.com/josh2kv',
   email: 'josh2kv@gmail.com',
   phone: '010-4450-2124',
@@ -100,7 +100,7 @@ const Profile = () => {
         </div>
         <div className="details">{contactInfo[contact]}</div>
       </div>
-      <Download />
+      {/* <Download /> */}
     </Block>
   );
 };
@@ -114,7 +114,7 @@ const Block = styled.div`
   height: 100%;
 
   .avatar {
-    margin-bottom: 6rem;
+    margin-bottom: 8rem;
 
     .photo-wrapper {
       position: relative;
@@ -153,7 +153,7 @@ const Block = styled.div`
   }
 
   .status {
-    margin-bottom: 5rem;
+    margin-bottom: 7rem;
 
     .row {
       display: flex;
@@ -196,7 +196,7 @@ const Block = styled.div`
     .details {
       /* color: ${themeGet('colors.primary')}; */
       font-weight: ${themeGet('fontWeights.light')};
-      font-size: ${themeGet('fontSizes.s4')};
+      font-size: ${themeGet('fontSizes.s3')};
       text-align: center;
     }
   }

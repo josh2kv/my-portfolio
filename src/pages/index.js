@@ -23,7 +23,7 @@ const tabs = [
 ];
 
 const IndexPage = () => {
-  const [selectedTab, setSelectedTab] = useState('home');
+  const [selectedTab, setSelectedTab] = useState('portfolio');
 
   const handleClickTab = tab => {
     setSelectedTab(tab);
